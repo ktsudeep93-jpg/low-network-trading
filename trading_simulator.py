@@ -1,7 +1,7 @@
 import random
 import time
 
-print("WELCOME TO LOW NETWORK TRADING FLATFORM ")
+print("WELCOME TO LOW NETWORK SIMULATOR ")
 
 support = float(input("enter the support zone price : "))
 resistance = float(input("enter the resistance zone price : "))
@@ -20,8 +20,8 @@ while True :
     else :
         print("MARKET IN SIDEWAYS-WAIT ")
 
-    choice = input("do you want to place an order (yes/no) : ")
-    if choice == 'yes':
+    choice = input("ENTER YOUR CHOICE ")
+    if choice == '1':
         stock = input("enter the stock name : ")
         entry = float(input("enter the entry price : "))
         exit_price = float(input("enter the exit price : "))
@@ -46,8 +46,17 @@ while True :
             "profit" : profit
             }
         trades.append(trade)
-        print("your order is placed and saved ")
-        print("order history ")
+        file = open("trade_log.txt","a")
+        file.write(stock + " " + str(entry) + " " + str(exit_price)+ " "+str(profit)+"\n")
+        file.close()
+        print("trade saved to file")
+    elif choice == '2':
+        try:
+            file = open("trade_log.txt","r")
+            print("saved trades ")
+            file.close()
+        except:
+            print("no trade history found ")
         for t in trades:
             print("----------------------")
             print("stock name : ",t["stock"])
@@ -56,7 +65,16 @@ while True :
             print("stoploss is : ",t["stoploss"])
             print("take profit is : ",t["take_profit"])
             print("profit is : ",t["profit"])
-        print("recent price : ",prices[-5:])
+        total_profit = 0
+        for t in trades :
+            total_profit += t["profit"]
+
+        total_trades = len(trades)
+
+        print("TOTAL TRADES : ",total_trades)
+        print("TOTAL PROFIT : ",total_profit)
+
+        print("recent prices : ",prices[-5:])
         print("--------------------------------")
 
         time.sleep(2)
