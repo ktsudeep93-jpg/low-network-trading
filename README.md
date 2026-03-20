@@ -1,25 +1,24 @@
 # Low Network Trading Platform
 
-This is a prototype trading simulator built using Python.
-
-The goal of this project is to create a trading platform that works even in low internet network conditions.
+This is a Python-based trading simulator designed to work even in low network conditions.
 
 ## Features
-- Simulates market prices
-- Detects buy and sell signals
-- Uses support and resistance levels
-- Shows recent price history
+- Buy/Sell signal based on price
+- Trade execution system
+- Stoploss and Take Profit
+- Profit calculation
+- Trade history tracking
+- CSV file storage
 
 ## Technologies Used
 - Python
-- Random module
-- Time module
+
+## How to Run
+1. Run trading_simulator.py
+2. Enter support and resistance
+3. Choose options from menu
 
 ## Future Improvements
 - Real market data integration
-- Chart visualization
-- Mobile trading support
-- Ultra low bandwidth optimization
-
-## Author
-Sudeep
+- Advanced trading strategies (SMC)
+- GUI interface
