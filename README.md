@@ -22,3 +22,11 @@ This is a Python-based trading simulator designed to work even in low network co
 - Real market data integration
 - Advanced trading strategies (SMC)
 - GUI interface
+
+## Latest Version 
+- Persistent trading system
+- CSV storage and retrieval
+- Trade history tracking
+- Profit calculation
+
+  
