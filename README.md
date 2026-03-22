@@ -34,8 +34,3 @@ This project simulates basic trading logic with data persistence using CSV files
 
 ---
 
-## ▶️ How to Run
-
-1. Run the main file:
-   ```bash
-   python persistent_system.py
