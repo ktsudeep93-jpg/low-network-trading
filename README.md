@@ -1,32 +1,41 @@
-# Low Network Trading Platform
+# 🚀 Low Network Trading Platform
 
-This is a Python-based trading simulator designed to work even in low network conditions.
+A Python-based trading simulator designed to work efficiently even in low network conditions.  
+This project simulates basic trading logic with data persistence using CSV files.
 
-## Features
-- Buy/Sell signal based on price
-- Trade execution system
-- Stoploss and Take Profit
-- Profit calculation
-- Trade history tracking
-- CSV file storage
+---
 
-## Technologies Used
-- Python
+## 📌 Features
 
-## How to Run
-1. Run trading_simulator.py
-2. Enter support and resistance
-3. Choose options from menu
+- 📈 Buy/Sell signal based on price
+- ⚙️ Trade execution system
+- 🛑 Stoploss & 🎯 Take Profit
+- 💰 Profit calculation
+- 📜 Trade history tracking
+- 💾 CSV file storage (persistent system)
 
-## Future Improvements
-- Real market data integration
-- Advanced trading strategies (SMC)
-- GUI interface
+---
 
-## Latest Version 
-- Persistent trading system
-- CSV storage and retrieval
-- Trade history tracking
-- Profit calculation
+## 🧠 Project Structure
 
-  
+- `persistent_system.py` → ⭐ Final version (main system with CSV storage)
+- `auto_signal_trading.py` → Signal-based trading logic
+- `low_network_trading.py` → Basic low-network prototype
+- `trading_simulator.py` → Initial version of simulator
+- `trade_history.py` → Trade tracking logic
+- `README.md` → Project documentation
+
+---
+
+## 🛠️ Technologies Used
+
+- Python 🐍
+- CSV (for data storage)
+
+---
+
+## ▶️ How to Run
+
+1. Run the main file:
+   ```bash
+   python persistent_system.py
