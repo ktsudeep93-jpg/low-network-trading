@@ -117,10 +117,27 @@ while True:
             print("takeprofit",t["take_profit"])
             print("profit",t["profit"])
         total_profit = 0
+        wins = 0
+        losses = 0
         for t in trades:
-            total_profit =+ t["profit"]
+            total_profit += t["profit"]
 
-        print("total trades " ,len(trades))
+            if t["profit"] > 0:
+                wins += 1
+
+            else :
+                losses += 1
+        total_trades = len(trades)
+        if total_trades > 0:
+            win_rate = (wins/total_trades)*100
+
+        else :
+            win_rate = 0
+        print("--------ANALYSIS---------")
+        print("total trades : " , total_trades)
+        print("winning trades : ",wins)
+        print("losing trades : ",losses)
+        print("win rate :",round(win_rate,2),"%")
         print("total profit : ",total_profit)
         
 
